@@ -1,0 +1,15 @@
+<div class="contentCard">
+  <h3 class="text-center">Layout Preview</h3>
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h4 class="mb-0">{{name || 'name'}}</h4>
+      <button [disabled]="viewList === undefined" class="btn btn-outline-{{viewList ? 'primary' : 'danger'}}">
+        {{viewList === undefined ? 'none' : viewList ? 'online' : 'offline'}}
+      </button>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Description</h5>
+      <p class="card-text">{{description || 'this will be the description created for students'}}</p>
+    </div>
+  </div>
+</div>

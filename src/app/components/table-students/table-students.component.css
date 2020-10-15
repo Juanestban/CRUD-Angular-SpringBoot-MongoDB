@@ -1,0 +1,14 @@
+.contentTable {
+  width: 100%;
+}
+
+table {
+  width: 80%;
+}
+
+.contentOnline {
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}

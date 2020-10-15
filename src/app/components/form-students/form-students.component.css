@@ -1,0 +1,15 @@
+.contentForm {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-group, .form-check {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}

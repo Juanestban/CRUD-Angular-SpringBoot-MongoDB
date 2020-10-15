@@ -1,0 +1,61 @@
+<div class="contentForm d-flex justity-content-center flex-column align-items-center">
+  <h3>Form student</h3>
+  <div class="ifCreate" *ngIf="id === undefined && name === undefined">
+    <form class="d-flex justify-content-around">
+      <div class="form-group">
+        <input [(ngModel)]="student.name" type="text" class="form-control" id="name" name="name" placeholder="name">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="student.description" type="text" name="description" class="form-control" id="description"
+          placeholder="description">
+      </div>
+      <div class="contentButtonRadio">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radio1" id="Radios1" (change)="onChange($event.target)">
+          <label class="form-check-label" for="Radios1">
+            online
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radio1" id="Radios2" (change)="onChange($event.target)">
+          <label class="form-check-label" for="Radios2">
+            offline
+          </label>
+        </div>
+      </div>
+      <div class="contentButton d-flex align-items-center">
+        <button (click)="saveStudent()" type="submit" class="btn btn-outline-success">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="ifModificate" *ngIf="id !== undefined && name !== undefined">
+    <form class="d-flex justify-content-around">
+      <div class="form-group">
+        <input [(ngModel)]="name" type="text" class="form-control" id="name" name="name" placeholder="name">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="description" type="text" name="description" class="form-control" id="description"
+          placeholder="description">
+      </div>
+      <div class="contentButtonRadio">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radio1" id="Radios1" [checked]="viewList" (change)="onChange($event.target)">
+          <label class="form-check-label" for="Radios1">
+            online
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radio1" id="Radios2" [checked]="!viewList" (change)="onChange($event.target)">
+          <label class="form-check-label" for="Radios2">
+            offline
+          </label>
+        </div>
+      </div>
+      <div class="contentButton d-flex align-items-center">
+        <button (click)="uploadButton()" type="submit" class="btn btn-outline-success">Send</button>
+      </div>
+    </form>
+  </div>
+
+</div>
